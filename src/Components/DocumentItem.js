@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { Link } from "react-router-dom";
 
 class DocumentItem extends Component {
   render() {
@@ -10,9 +11,9 @@ class DocumentItem extends Component {
           <h4>{this.props.document.type}</h4>
         </div>
         <div className="list-child-2">
-          <a href="none" target="blank">
+          <Link to={"/document/" + this.props.document.id}>
             <span>Detail</span>
-          </a>
+          </Link>
         </div>
       </>
     );

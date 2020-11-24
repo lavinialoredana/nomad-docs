@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-//import "../DocumentList.css";
+import "../DocumentList.css";
 import DocumentItem from "./DocumentItem.js";
 
 
