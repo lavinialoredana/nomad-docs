@@ -2,27 +2,28 @@ import DocumentList from "./Components/DocumentList";
 import DocumentView from "./Components/DocumentView";
 import { BrowserRouter, Route } from "react-router-dom";
 
+
 const array_of_docs = [
   {
-    title: "Casa de Bernarda Alba",
+    title: "Penguin and Pinecone",
     type: "Simple",
     date: "2020/11/11",
     id: "1",
   },
   {
-    title: "Casa del Sr. Usher",
+    title: "Penguin’s Big Adventure",
     type: "Custom",
     date: "2020/12/11",
     text:
-      'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.',
+      "Penguin wants to do something no penguin has done before – he wants to set foot on the North Pole. So Penguin sets out with his adventure map to travel to the other side of the world.",
     id: "2",
   },
   {
-    title: "Casa del Sr. Usher",
+    title: "Little Penguin Gets the Hiccups",
     type: "Advanced",
     date: "2020/11/13",
     text:
-      'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.',
+      " Ben opens a gift and receives Penguin. Ben is so happy and wants to play. But Penguin says nothing. Ben tries and tries to get Penguin to talk or laugh. But Penguin says nothing. Little Penguin has a bad case of the hiccups. He tries different ways to get rid of them but nothing works. Will a good scare help him? ",
     image:
       "https://cdn.jpegmini.com/user/images/slider_puffin_before_mobile.jpg",
     id: "3",
@@ -40,7 +41,7 @@ function App() {
         render={(props) => {
           const { match } = props;
           const { id } = match.params;
-          const doc = array_of_docs.find(doc => id === doc.id );
+          const doc = array_of_docs.find((doc) => id === doc.id);
           return <DocumentView document={doc} />;
         }}
       />

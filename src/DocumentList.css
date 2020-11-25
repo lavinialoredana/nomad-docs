@@ -1,21 +1,9 @@
-.list-container{
+.list-container {
   margin: 0 auto;
   width: 80vw;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-}
-
-.list-child-1{
-  
-
-}
-
-.tick-box{
-
-}
-
-.list-container > a{
-  align-self: flex-end;
+  list-style-type: none;
 }

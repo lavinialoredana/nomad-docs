@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../DocumentView.css";
+import Header from "../Components/Header";
 
 class DocumentView extends Component {
   render() {
@@ -13,17 +14,23 @@ class DocumentView extends Component {
     );
 
     return (
-      <div className="main-container">
-        <a href="none" target="blank">
-          {" "}
-          Next Document{" "}
-        </a>
-        <h1>{document.title}</h1>
-        {/* I am now using these 2 variables to store the elements declared above*/}
-        {text}
-        {image}
-        <button className="btn">Delete</button>
-        <p>Document date is {new Date(document.date).toLocaleDateString()}.</p>
+      <div>
+        <Header />
+        <div className="main-container">
+          <a href="none" target="blank">
+            Next Document
+          </a>
+          <h1>{document.title}</h1>
+          {/* I am now using these 2 variables to store the elements declared above*/}
+          {text}
+          {image}
+          <div className="btn-and-date">
+            <span>
+              Document date is {new Date(document.date).toLocaleDateString()}.
+            </span>
+            <button className="btn">Delete</button>
+          </div>
+        </div>
       </div>
     );
   }

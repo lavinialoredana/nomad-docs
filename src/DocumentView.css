@@ -1,6 +1,7 @@
 .main-container {
   margin: 0 auto;
   width: 70vw;
+  padding-top: 60px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -14,10 +15,9 @@
 }
 
 h1 {
-  margin:15px;
+  margin: 15px;
   color: darksalmon;
   font-weight: bold;
-  
 }
 
 .text-container {
@@ -30,31 +30,35 @@ h1 {
 
 .foto-container {
   align-self: center;
-  width:70vw;
+  width: 70vw;
   padding: 30px 15px;
-
-
 }
 
-.btn {
+.btn-and-date {
+  padding-top: 15px;
+  justify-content: space-evenly;
+  width: 100%;
+}
 
-    align-self: flex-end;
-    font-size: 18px;
-    font-weight: 600;
-    color: #FFE65E;
-    text-transform: uppercase;
-    padding: 10px 32px;
-    margin-top: 20px;
-    border-radius: 16px;
-    margin-bottom: 70px;
-    background-color: #696F82;
-    border-color: #6a7188;
-    transition: 0.5;
+
+.btn {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffe65e;
+  text-transform: uppercase;
+  padding: 10px 32px;
+  margin-bottom: 30px;
+  border-radius: 16px;
+  background-color: #696f82;
+  border-color: #6a7188;
+  transition: 0.5;
+  float:right;
+
 }
 
 .btn:hover {
-  box-shadow: 0 2px 5px #DEEFFF;
-  background-color: #DEEFFF;
+  box-shadow: 0 2px 5px #deefff;
+  background-color: #deefff;
   border-color: #c4dbf0;
-  color: #696F82;
+  color: #696f82;
 }
