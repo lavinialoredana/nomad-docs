@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import "../DocumentList.css";
 import DocumentItem from "./DocumentItem.js";
-import Header from "../Components/Header";
+import fetchDocuments from "../fetchDocuments";
 
 const renderListItem = function (documentItem) {
   return (
@@ -14,20 +14,57 @@ const renderListItem = function (documentItem) {
   );
 };
 
-class DocumentList extends Component {
-  render() {
-    return (
-      <div>
-        <Header />
-        <ul className="list-container">
-          {/* // I am rendering all the elements on "documents" list
+const DocumentList = () => {
+  const [typeOfDocument, setTypeOfDocument] = useState("All");
+  const [pageNumber, setPageNumber] = useState(1);
+  const [fetchResults, setFetchResults] = useState(
+    fetchDocuments(typeOfDocument, pageNumber),
+  );
+
+  useEffect(() => {
+    setFetchResults(fetchDocuments(typeOfDocument, pageNumber));
+  }, [typeOfDocument, pageNumber]);
+
+
+  const onChange = (event) => {
+    setTypeOfDocument(event.target.value);
+  };
+
+  const changeToPage = (pageNumber) => {
+    console.log(pageNumber);
+    setPageNumber(pageNumber)
+  }
+  return (
+    <div>
+      <select onChange={onChange}>
+        <option disabled selected>
+          Filter
+        </option>
+        <option value="Simple">simple</option>
+        <option value="Custom">custom</option>
+        <option value="Advanced">advanced</option>
+        <option value="All">all</option>
+      </select>
+
+      <ul className="list-container">
+        {/* // I am rendering all the elements on "documents" list
         // by calling map I know for each element a render function will be called,
         // the render function that will be called is "renderListItem",
         // because I type this function as the argument of "map" */}
-          {this.props.documents.map(renderListItem)}
-        </ul>
+        {fetchResults?.documents.map(renderListItem)}
+      </ul>
+      <div className="page-container">
+        {
+          <div className="page-container">
+            {Array(fetchResults.numberOfPages)
+              .fill()
+              .map((value, index) => (
+                <div onClick={()=>changeToPage(index+1)}>{index+1}</div>
+              ))}
+          </div>
+        }
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 export default DocumentList;

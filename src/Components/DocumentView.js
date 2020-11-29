@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "../DocumentView.css";
-import Header from "../Components/Header";
 
 class DocumentView extends Component {
   render() {
@@ -12,10 +11,9 @@ class DocumentView extends Component {
     const image = document.image && (
       <img className="foto-container" src={document.image} alt="Penguin" />
     );
-
+    console.log(this.props);
     return (
       <div>
-        <Header />
         <div className="main-container">
           <a href="none" target="blank">
             Next Document
