@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../DocumentList.css";
+import "./DocumentList.css";
 import DocumentItem from "./DocumentItem.js";
 import fetchDocuments from "../fetchDocuments";
 
@@ -25,26 +25,27 @@ const DocumentList = () => {
     setFetchResults(fetchDocuments(typeOfDocument, pageNumber));
   }, [typeOfDocument, pageNumber]);
 
-
   const onChange = (event) => {
     setTypeOfDocument(event.target.value);
   };
 
   const changeToPage = (pageNumber) => {
     console.log(pageNumber);
-    setPageNumber(pageNumber)
-  }
+    setPageNumber(pageNumber);
+  };
   return (
     <div>
-      <select onChange={onChange}>
-        <option disabled selected>
-          Filter
-        </option>
-        <option value="Simple">simple</option>
-        <option value="Custom">custom</option>
-        <option value="Advanced">advanced</option>
-        <option value="All">all</option>
-      </select>
+      <div className="filter-container">
+        <select onChange={onChange}>
+          <option disabled selected>
+            Filter
+          </option>
+          <option value="Simple">simple</option>
+          <option value="Custom">custom</option>
+          <option value="Advanced">advanced</option>
+          <option value="All">all</option>
+        </select>
+      </div>
 
       <ul className="list-container">
         {/* // I am rendering all the elements on "documents" list
@@ -53,17 +54,15 @@ const DocumentList = () => {
         // because I type this function as the argument of "map" */}
         {fetchResults?.documents.map(renderListItem)}
       </ul>
-      <div className="page-container">
-        {
-          <div className="page-container">
-            {Array(fetchResults.numberOfPages)
-              .fill()
-              .map((value, index) => (
-                <div onClick={()=>changeToPage(index+1)}>{index+1}</div>
-              ))}
-          </div>
-        }
-      </div>
+      {
+        <div className="pagination-container">
+          {Array(fetchResults.numberOfPages)
+            .fill()
+            .map((value, index) => (
+              <div className= "page-no" onClick={() => changeToPage(index + 1)}>{index + 1}</div>
+            ))}
+        </div>
+      }
     </div>
   );
 };

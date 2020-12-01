@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../DocumentView.css";
+import "./DocumentView.css";
 
 class DocumentView extends Component {
   render() {

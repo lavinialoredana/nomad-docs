@@ -1,5 +1,5 @@
 .main-container {
-  margin: 0 auto;
+  margin: 30px;
   width: 70vw;
   padding-top: 60px;
   display: flex;
@@ -10,7 +10,6 @@
 
 .main-container > a {
   color: blueviolet;
-  font-size: 16px;
   align-self: flex-end;
 }
 
@@ -23,7 +22,6 @@ h1 {
 .text-container {
   padding: 30px 15px;
   color: #5d6a14;
-  font-size: 16px;
   line-height: 1.8;
   font-weight: 300;
 }
