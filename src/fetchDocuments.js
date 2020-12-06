@@ -10,10 +10,8 @@ const fetchDocuments = (type = "All", page = 1) => {
 
   const numberOfResults = filteredArray.length;
 
-  const sliceLimit =
-    numberOfResults % resultsPerPage === 0
-      ? page * resultsPerPage
-      : numberOfResults;
+  const sliceLimit = numberOfResults < page*resultsPerPage?
+    numberOfResults : page*resultsPerPage;
 
   const slicedArray = filteredArray.slice(
     page * resultsPerPage - resultsPerPage,

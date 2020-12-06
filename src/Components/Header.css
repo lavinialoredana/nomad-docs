@@ -1,20 +1,16 @@
-
-
-.header{
-  margin: 10px 60px 0px;
-  padding: 10px 10px 0px;
-  width: 80vw;
-
+.header {
+  padding: 10px 0;
+  width: 90%;
+  margin: auto;
 }
 
-.logo{
+.logo {
   color: #000;
   font-size: 24px;
   font-weight: bold;
 }
 
 @media screen and (max-width: 991px) {
-  
 }
 
 @media screen and (max-width: 767px) {
