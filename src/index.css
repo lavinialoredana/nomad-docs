@@ -1,17 +1,12 @@
-*{
-  margin: 5px;
+* {
+  margin: 0;
   padding: 0;
-  
-  
 }
- 
 
 body {
   font-size: 16pt;
   min-width: 500px;
   width: 100vw;
-
-  
 }
 
 code {

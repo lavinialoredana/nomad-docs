@@ -1,5 +1,6 @@
 .list-main {
-  margin: 20px 50px;
+  margin: 20px 0;
+  box-sizing: border-box;
   padding: 10px 10px 0px;
   width: 90vw;
   display: flex;
@@ -20,34 +21,55 @@
 
 .tick-box {
   border: 1px solid #5d6a14;
-  width: 2vw;
+  width: 50px;
+  height: 50px;
   margin-bottom: 10px;
-  
 }
-.container-right{
+.container-right {
   border: 1px solid #5d6a14;
   flex-grow: 0;
   padding: 10px 10px;
-  align-self: start;
-
-
+  align-self: flex-end;
+  margin-bottom: 10px;
 }
 
 .link {
   color: blueviolet;
-  
- 
 }
 
 .h3 {
   color: darksalmon;
   font-weight: bold;
-  margin: 0px 10px ;
+  margin: 0px 10px;
 }
 
 .h4 {
   color: #5d6a14;
   font-weight: bold;
   font-weight: 300;
-  margin: 10px 10px ;
+  margin: 10px 10px;
+}
+
+.list-container li {
+  width: 100%;
+}
+
+/* Tablet Devices */
+@media screen and (max-width: 991px) {
+  .list-main {
+    width: 100%;
+    margin: 20px 0;
+    box-sizing: border-box;
+  }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 767px) {
+  .list-main {
+    flex-direction: column;
+  }
+
+  .container-right {
+    border: none;
+  }
 }
