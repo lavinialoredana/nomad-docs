@@ -23,7 +23,7 @@ class DocumentView extends Component {
           {text}
           {image}
           <div className="btn-and-date">
-            <span>
+            <span className="date">
               Document date is {new Date(document.date).toLocaleDateString()}.
             </span>
             <button className="btn">Delete</button>

@@ -2,7 +2,7 @@ import React from "react";
 
 function DocumentFilter({ onChange }) {
   return (
-    <select onChange={onChange}>
+    <select onChange={onChange} className="filter">
       <option disabled selected>Filter</option>
       <option>simple</option>
       <option>custom</option>

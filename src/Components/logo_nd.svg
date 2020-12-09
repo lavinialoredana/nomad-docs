@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="150px" height="70px" viewBox="0 0 150 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>LOGO ND</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="LOGO-ND">
+            <rect id="Rectangle" fill="#FFEE99" x="0" y="0" width="150" height="70"></rect>
+            <g id="Group" transform="translate(6.049507, 9.700000)">
+                <text id="NOMAD" font-family="TrebuchetMS, Trebuchet MS" font-size="32" font-weight="normal" letter-spacing="6.66666667" fill="#292200">
+                    <tspan x="0.950493241" y="30.3">NOMAD</tspan>
+                </text>
+                <text id="DOCS" font-family="TrebuchetMS-Bold, Trebuchet MS" font-size="16" font-weight="bold" fill="#292200">
+                    <tspan x="85.9504932" y="46.3">DOCS</tspan>
+                </text>
+                <line x1="2.4443204" y1="40.8" x2="81.9504932" y2="41.3" id="Line" stroke="#0E0D0D" stroke-width="2" stroke-linecap="square"></line>
+            </g>
+        </g>
+    </g>
+</svg>

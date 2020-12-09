@@ -9,19 +9,19 @@
 }
 
 .main-container > a {
-  color: blueviolet;
+  color: #FF8500;
   align-self: flex-end;
 }
 
 h1 {
   margin: 15px;
-  color: darksalmon;
+  color: #292200;
   font-weight: bold;
 }
 
 .text-container {
   padding: 30px 15px;
-  color: #5d6a14;
+  color: #2D848A;
   line-height: 1.8;
   font-weight: 300;
 }
@@ -57,4 +57,8 @@ h1 {
   background-color: #deefff;
   border-color: #c4dbf0;
   color: #696f82;
+}
+
+.date{
+  color: #2D848A;
 }
