@@ -1,26 +1,19 @@
 * {
-
   margin: 0;
   padding: 0;
-  color: #FF8500;
-
+  color: #ff8500;
 }
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 
 body {
   font-size: 16pt;
   min-width: 500px;
   width: 100vw;
   background-color: #fff8d6;
-  background:radial-gradient(
-    circle,
-    #ffdd47 0%,
-    #ffee99 80%
-  );
-  font-family: 'Playfair Display', serif;
-  
+  background: radial-gradient(circle, #ffdd47 0%, #ffee99 80%);
+  font-family: "Playfair Display", serif;
 }
 
-
-
+.filter {
+  color: #292200;
+}
